@@ -1,0 +1,127 @@
+{
+    "Quiz": {
+        "title": "Marathon Preparation Quiz",
+        "description": "This quiz will help you create a personalized marathon preparation plan.",
+        "id": "s1",
+        "questions": [
+            {
+                "id": "s1q1",
+                "title": "What is your current fitness level?",
+                "answers": [
+                    {
+                        "id": "s1q1a1",
+                        "title": "Beginner: I have little to no running experience."
+                    },
+                    {
+                        "id": "s1q2a2",
+                        "title": "Intermediate: I can run a few kilometers without difficulty."
+                    },
+                    {
+                        "id": "s1q3a3",
+                        "title": "Advanced: I regularly run longer distances (e.g., half-marathons)."
+                    }
+                ]
+            },
+            {
+                "id": "q2",
+                "title": "Have you participated in a marathon or long-distance race before?",
+                "answers":[
+                    {
+                        "id": "s1q2a1",
+                        "title": "Yes, I have completed a marathon."
+                    },
+                    {
+                        "id": "s1q2a2",
+                        "title": "No, I have never participated in a marathon or long-distance race."
+                    }
+                ]
+            },
+            {
+                "id": "s1q3",
+                "title": "How much time do you have before the marathon?",
+                "answers":[
+                    {
+                        "id": "s1q3a1",
+                        "title": "Less than 3 months."
+                    },
+                    {
+                        "id": "s1q3a2",
+                        "title": "3-6 months."
+                    },
+                    {
+                        "id": "s1q3a3",
+                        "title": "More than 6 months."
+                    }
+                ]
+            },
+            {
+                "id": "s1q4",
+                "title": "What is your primary goal for the marathon?",
+                "answers":[
+                    {
+                        "id": "s1q4a1",
+                        "title": "Complete the marathon and cross the finish line."
+                    },
+                    {
+                        "id": "s1q4a2",
+                        "title": "Achieve a specific time goal (please specify your target time)."
+                    },
+                    {
+                        "id": "s1q4a3",
+                        "title": "Improve my overall fitness and endurance."
+                    }
+                ]
+            },
+            {
+                "id": "s1q5",
+                "title": "How many days per week are you willing to commit to running?",
+                "answers":[
+                    {
+                        "id": "s1q5a1",
+                        "title": "2-3 days per week."
+                    },
+                    {
+                        "id": "s1q5a2",
+                        "title": "4-5 days per week."
+                    },
+                    {
+                        "id": "s1q5a3",
+                        "title": "6 or more days per week."
+                    }
+                ]
+            },
+            {
+                "id": "s1q6",
+                "title": "What is the longest distance you have run recently?",
+                "answers":[
+                    {
+                        "id": "s1q6a1",
+                        "title": "Less than 5 kilometers (3.1 miles)."
+                    },
+                    {
+                        "id": "s1q6a2",
+                        "title": "5-10 kilometers (3.1-6.2 miles)."
+                    },
+                    {
+                        "id": "s1q6a3",
+                        "title": "More than 10 kilometers (6.2 miles)."
+                    }
+                ]
+            },
+            {
+                "id": "s1q7",
+                "title": "Are you willing to incorporate cross-training exercises (e.g., strength training, stretching, yoga) into your training plan?",
+                "answers":[
+                    {
+                        "id": "s1q7a1",
+                        "title": "Yes, I am open to cross-training exercises."
+                    },
+                    {
+                        "id": "s1q7a2",
+                        "title": "No, I prefer to focus solely on running."
+                    }
+                ]
+            }
+        ]
+    }
+}
