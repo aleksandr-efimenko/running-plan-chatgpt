@@ -10,15 +10,18 @@
                 "answers": [
                     {
                         "id": "s1q1a1",
-                        "title": "Beginner: I have little to no running experience."
+                        "title": "Beginner: I have little to no running experience.",
+                        "prompt": "has no running experience"
                     },
                     {
                         "id": "s1q2a2",
-                        "title": "Intermediate: I can run a few kilometers without difficulty."
+                        "title": "Intermediate: I can run a few kilometers without difficulty.",
+                        "prompt": "can run a few kilometers without difficulty"
                     },
                     {
                         "id": "s1q3a3",
-                        "title": "Advanced: I regularly run longer distances (e.g., half-marathons)."
+                        "title": "Advanced: I regularly run longer distances (e.g., half-marathons).",
+                        "prompt": "regularly runs longer distances"
                     }
                 ]
             },
@@ -28,11 +31,13 @@
                 "answers":[
                     {
                         "id": "s1q2a1",
-                        "title": "Yes, I have completed a marathon."
+                        "title": "Yes, I have completed a marathon.",
+                        "prompt": "has completed a marathon"
                     },
                     {
                         "id": "s1q2a2",
-                        "title": "No, I have never participated in a marathon or long-distance race."
+                        "title": "No, I have never participated in a marathon or long-distance race.",
+                        "prompt": "has never participated in a marathon or long-distance race"
                     }
                 ]
             },
@@ -42,15 +47,18 @@
                 "answers":[
                     {
                         "id": "s1q3a1",
-                        "title": "Less than 3 months."
+                        "title": "Less than 3 months.",
+                        "prompt": "has less than 3 months before the marathon"
                     },
                     {
                         "id": "s1q3a2",
-                        "title": "3-6 months."
+                        "title": "3-6 months.",
+                        "prompt": "has 3-6 months before the marathon"
                     },
                     {
                         "id": "s1q3a3",
-                        "title": "More than 6 months."
+                        "title": "More than 6 months.",
+                        "prompt": "has more than 6 months before the marathon"
                     }
                 ]
             },
@@ -60,15 +68,18 @@
                 "answers":[
                     {
                         "id": "s1q4a1",
-                        "title": "Complete the marathon and cross the finish line."
+                        "title": "Complete the marathon and cross the finish line.",
+                        "prompt": "aims just to complete the marathon without a specific time goal"
                     },
                     {
                         "id": "s1q4a2",
-                        "title": "Achieve a specific time goal (please specify your target time)."
+                        "title": "Achieve a specific time goal (e.g., 4 hours).",
+                        "prompt": "aims to complete the marathon in a specific time"
                     },
                     {
                         "id": "s1q4a3",
-                        "title": "Improve my overall fitness and endurance."
+                        "title": "Improve my overall fitness and endurance.",
+                        "prompt": "aims to improve overall fitness and endurance"
                     }
                 ]
             },
@@ -78,15 +89,18 @@
                 "answers":[
                     {
                         "id": "s1q5a1",
-                        "title": "2-3 days per week."
+                        "title": "2-3 days per week.",
+                        "prompt": "is willing to commit to running 2-3 days per week"
                     },
                     {
                         "id": "s1q5a2",
-                        "title": "4-5 days per week."
+                        "title": "4-5 days per week.",
+                        "prompt": "is willing to commit to running 4-5 days per week"
                     },
                     {
                         "id": "s1q5a3",
-                        "title": "6 or more days per week."
+                        "title": "6 or more days per week.",
+                        "prompt": "is willing to commit to running 6 or more days per week"
                     }
                 ]
             },
@@ -96,15 +110,18 @@
                 "answers":[
                     {
                         "id": "s1q6a1",
-                        "title": "Less than 5 kilometers (3.1 miles)."
+                        "title": "Less than 5 kilometers (3.1 miles).",
+                        "prompt": "the longest run they are able to complete is less than 5 kilometers"
                     },
                     {
                         "id": "s1q6a2",
-                        "title": "5-10 kilometers (3.1-6.2 miles)."
+                        "title": "5-10 kilometers (3.1-6.2 miles).",
+                        "prompt": "the longest run they are able to complete is 5-10 kilometers"
                     },
                     {
                         "id": "s1q6a3",
-                        "title": "More than 10 kilometers (6.2 miles)."
+                        "title": "More than 10 kilometers (6.2 miles).",
+                        "prompt": "the longest run they are able to complete is more than 10 kilometers"
                     }
                 ]
             },
@@ -114,11 +131,13 @@
                 "answers":[
                     {
                         "id": "s1q7a1",
-                        "title": "Yes, I am open to cross-training exercises."
+                        "title": "Yes, I am open to cross-training exercises.",
+                        "prompt": "wants to incorporate cross-training exercises into their training plan"
                     },
                     {
                         "id": "s1q7a2",
-                        "title": "No, I prefer to focus solely on running."
+                        "title": "No, I prefer to focus solely on running.",
+                        "prompt": "does not want to incorporate cross-training exercises into their training plan"
                     }
                 ]
             }
