@@ -1,20 +1,22 @@
 import "survey-core/modern.min.css";
 import { Model } from "survey-core";
 import { Survey } from "survey-react-ui";
+import mainQuizJson from "~/data/MainQuiz.json";
 
 const surveyJson = {
-  elements: [
-    {
-      name: "FirstName",
-      title: "Enter your first name:",
-      type: "text",
-    },
-    {
-      name: "LastName",
-      title: "Enter your last name:",
-      type: "text",
-    },
-  ],
+  elements: mainQuizJson.Quiz.questions.map((question) => {
+    return {
+      name: question.id,
+      title: question.title,
+      type: "radiogroup",
+      choices: question.answers.map((answer) => {
+        return {
+          value: answer.id,
+          text: answer.title,
+        };
+      }),
+    };
+  }),
 };
 
 export default function MainQuiz() {
