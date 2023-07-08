@@ -11,33 +11,17 @@
                     {
                         "id": "s1q1a1",
                         "title": "Beginner: I have little to no running experience.",
-                        "prompt": "has no running experience"
+                        "prompt": "The person has no running experience"
                     },
                     {
                         "id": "s1q2a2",
                         "title": "Intermediate: I can run a few kilometers without difficulty.",
-                        "prompt": "can run a few kilometers without difficulty"
+                        "prompt": "The person can run a few kilometers without difficulty"
                     },
                     {
                         "id": "s1q3a3",
                         "title": "Advanced: I regularly run longer distances (e.g., half-marathons).",
-                        "prompt": "regularly runs longer distances"
-                    }
-                ]
-            },
-            {
-                "id": "q2",
-                "title": "Have you participated in a marathon or long-distance race before?",
-                "answers":[
-                    {
-                        "id": "s1q2a1",
-                        "title": "Yes, I have completed a marathon.",
-                        "prompt": "has completed a marathon"
-                    },
-                    {
-                        "id": "s1q2a2",
-                        "title": "No, I have never participated in a marathon or long-distance race.",
-                        "prompt": "has never participated in a marathon or long-distance race"
+                        "prompt": "The person regularly runs longer distances"
                     }
                 ]
             },
@@ -48,17 +32,17 @@
                     {
                         "id": "s1q3a1",
                         "title": "Less than 3 months.",
-                        "prompt": "has less than 3 months before the marathon"
+                        "prompt": "The plan duration must be less than 3 months"
                     },
                     {
                         "id": "s1q3a2",
                         "title": "3-6 months.",
-                        "prompt": "has 3-6 months before the marathon"
+                        "prompt": "The plan duration must be 3-6 months"
                     },
                     {
                         "id": "s1q3a3",
                         "title": "More than 6 months.",
-                        "prompt": "has more than 6 months before the marathon"
+                        "prompt": "The plan duration must be more than 6 months"
                     }
                 ]
             },
@@ -69,17 +53,12 @@
                     {
                         "id": "s1q4a1",
                         "title": "Complete the marathon and cross the finish line.",
-                        "prompt": "aims just to complete the marathon without a specific time goal"
+                        "prompt": "The person aims just to complete the marathon without a specific time goal"
                     },
                     {
                         "id": "s1q4a2",
                         "title": "Achieve a specific time goal (e.g., 4 hours).",
-                        "prompt": "aims to complete the marathon in a specific time"
-                    },
-                    {
-                        "id": "s1q4a3",
-                        "title": "Improve my overall fitness and endurance.",
-                        "prompt": "aims to improve overall fitness and endurance"
+                        "prompt": "The person aims to complete the marathon in a specific time"
                     }
                 ]
             },
@@ -90,17 +69,17 @@
                     {
                         "id": "s1q5a1",
                         "title": "2-3 days per week.",
-                        "prompt": "is willing to commit to running 2-3 days per week"
+                        "prompt": "Plan must contain 2-3 days of workouts per week"
                     },
                     {
                         "id": "s1q5a2",
                         "title": "4-5 days per week.",
-                        "prompt": "is willing to commit to running 4-5 days per week"
+                        "prompt": "Plan must contain 4-5 days of workouts per week"
                     },
                     {
                         "id": "s1q5a3",
                         "title": "6 or more days per week.",
-                        "prompt": "is willing to commit to running 6 or more days per week"
+                        "prompt": "Plan must contain 6 or more days of workouts per week"
                     }
                 ]
             },
@@ -111,17 +90,17 @@
                     {
                         "id": "s1q6a1",
                         "title": "Less than 5 kilometers (3.1 miles).",
-                        "prompt": "the longest run they are able to complete is less than 5 kilometers"
+                        "prompt": "The longest run person can currently complete is less than 5 kilometers"
                     },
                     {
                         "id": "s1q6a2",
                         "title": "5-10 kilometers (3.1-6.2 miles).",
-                        "prompt": "the longest run they are able to complete is 5-10 kilometers"
+                        "prompt": "The longest run person can currently complete is 5-10 kilometers"
                     },
                     {
                         "id": "s1q6a3",
                         "title": "More than 10 kilometers (6.2 miles).",
-                        "prompt": "the longest run they are able to complete is more than 10 kilometers"
+                        "prompt": "The longest run person can currently complete is more than 10 kilometers"
                     }
                 ]
             },
@@ -132,15 +111,32 @@
                     {
                         "id": "s1q7a1",
                         "title": "Yes, I am open to cross-training exercises.",
-                        "prompt": "wants to incorporate cross-training exercises into their training plan"
+                        "prompt": "Plan must incorporate cross-training exercises"
                     },
                     {
                         "id": "s1q7a2",
                         "title": "No, I prefer to focus solely on running.",
-                        "prompt": "does not want to incorporate cross-training exercises into their training plan"
+                        "prompt": "Plan must not incorporate cross-training exercises"
+                    }
+                ]
+            },
+            {
+                "id": "s1q8",
+                "title": "Show plan in miles or kilometers?",
+                "answers":[
+                    {
+                        "id": "s1q8a1",
+                        "title": "Miles",
+                        "prompt": "Show distance in mi"
+                    },
+                    {
+                        "id": "s1q8a2",
+                        "title": "Kilometers",
+                        "prompt": "Show distance in km"
                     }
                 ]
             }
+
         ]
     }
 }
