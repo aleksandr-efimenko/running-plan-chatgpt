@@ -1,16 +1,16 @@
 import { env } from "process";
 import { z } from "zod";
-import { Configuration, OpenAIApi } from "openai";
+
 import {
   createTRPCRouter,
   publicProcedure,
   protectedProcedure,
 } from "~/server/api/trpc";
 
+import { Configuration, OpenAIApi } from "openai";
 const configuration = new Configuration({
-  apiKey: env.OPENAI_API_KEY,
+  apiKey: process.env.OPENAI_API_KEY,
 });
-
 const openai = new OpenAIApi(configuration);
 
 export const openaiRouter = createTRPCRouter({
@@ -23,15 +23,18 @@ export const openaiRouter = createTRPCRouter({
         temperature: z.number(),
       })
     )
-    .query(async ({ input }) => {
-      const response = await openai.createCompletion({
-        model: "text-davinci-003",
-        prompt: "Say this is a test",
-        max_tokens: 7,
-        temperature: 0,
-      });
-      return {
-        response,
-      };
+    .mutation(async ({ input }) => {
+      console.log(input);
+      try {
+        const completion = await openai.createChatCompletion({
+          model: input.model,
+          messages: [{ role: "user", content: input.prompt }],
+          temperature: input.temperature,
+          max_tokens: input.max_tokens,
+        });
+        return completion.data;
+      } catch (error) {
+        console.log(error);
+      }
     }),
 });
