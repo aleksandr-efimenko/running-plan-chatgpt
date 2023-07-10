@@ -1,15 +1,11 @@
 import { env } from "process";
 import { z } from "zod";
 
-import {
-  createTRPCRouter,
-  publicProcedure,
-  protectedProcedure,
-} from "~/server/api/trpc";
+import { createTRPCRouter, publicProcedure } from "~/server/api/trpc";
 
 import { Configuration, OpenAIApi } from "openai";
 const configuration = new Configuration({
-  apiKey: process.env.OPENAI_API_KEY,
+  apiKey: env.OPENAI_API_KEY,
 });
 const openai = new OpenAIApi(configuration);
 
@@ -32,6 +28,7 @@ export const openaiRouter = createTRPCRouter({
           temperature: input.temperature,
           max_tokens: input.max_tokens,
         });
+
         return completion.data;
       } catch (error) {
         console.log(error);

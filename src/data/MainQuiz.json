@@ -23,7 +23,8 @@
                         "title": "Advanced: I regularly run longer distances (e.g., half-marathons).",
                         "prompt": "The person regularly runs longer distances"
                     }
-                ]
+                ],
+                "type": "radiogroup"
             },
             {
                 "id": "s1q3",
@@ -44,7 +45,8 @@
                         "title": "More than 6 months.",
                         "prompt": "The plan duration must be more than 6 months"
                     }
-                ]
+                ],
+                "type": "radiogroup"
             },
             {
                 "id": "s1q4",
@@ -60,7 +62,8 @@
                         "title": "Achieve a specific time goal (e.g., 4 hours).",
                         "prompt": "The person aims to complete the marathon in a specific time"
                     }
-                ]
+                ],
+                "type": "radiogroup"
             },
             {
                 "id": "s1q5",
@@ -81,60 +84,75 @@
                         "title": "6 or more days per week.",
                         "prompt": "Plan must contain 6 or more days of workouts per week"
                     }
-                ]
-            },
-            {
-                "id": "s1q6",
-                "title": "What is the longest distance you have run recently?",
-                "answers":[
-                    {
-                        "id": "s1q6a1",
-                        "title": "Less than 5 kilometers (3.1 miles).",
-                        "prompt": "The longest run person can currently complete is less than 5 kilometers"
-                    },
-                    {
-                        "id": "s1q6a2",
-                        "title": "5-10 kilometers (3.1-6.2 miles).",
-                        "prompt": "The longest run person can currently complete is 5-10 kilometers"
-                    },
-                    {
-                        "id": "s1q6a3",
-                        "title": "More than 10 kilometers (6.2 miles).",
-                        "prompt": "The longest run person can currently complete is more than 10 kilometers"
-                    }
-                ]
+                ],
+                "type": "radiogroup"
             },
             {
                 "id": "s1q7",
-                "title": "Are you willing to incorporate cross-training exercises (e.g., strength training, stretching, yoga) into your training plan?",
+                "title": "Are you willing to incorporate cross-training exercises into your training plan?",
                 "answers":[
                     {
                         "id": "s1q7a1",
                         "title": "Yes, I am open to cross-training exercises.",
-                        "prompt": "Plan must incorporate cross-training exercises"
+                        "prompt": "Plan must incorporate cross-training exercises:"
                     },
                     {
                         "id": "s1q7a2",
                         "title": "No, I prefer to focus solely on running.",
                         "prompt": "Plan must not incorporate cross-training exercises"
                     }
-                ]
+                ],
+                "type": "radiogroup"
             },
             {
                 "id": "s1q8",
+                "title": "Which cross-training exercises do you prefer?",   
+                "answers": [
+                    {
+                        "id": "s1q8a1",
+                        "title": "Cycling",
+                        "prompt": "Cycling"
+                    },
+                    {
+                        "id": "s1q8a2",
+                        "title": "Swimming",
+                        "prompt": "Swimming"
+                    },
+                    {
+                        "id": "s1q8a3",
+                        "title": "Strength training",
+                        "prompt": "Strength training"
+                    },
+                    {
+                        "id": "s1q8a4",
+                        "title": "Yoga",
+                        "prompt": "Yoga"
+                    },
+                    {
+                        "id": "s1q8a5",
+                        "title": "Stretching",
+                        "prompt": "Stretching"
+                    }
+                ],
+                "type": "checkbox",
+                "visibleIf":  "{s1q7} = 's1q7a1'"
+            },
+            {
+                "id": "s1q9",
                 "title": "Show plan in miles or kilometers?",
                 "answers":[
                     {
-                        "id": "s1q8a1",
+                        "id": "s1q9a1",
                         "title": "Miles",
                         "prompt": "Show distance in mi"
                     },
                     {
-                        "id": "s1q8a2",
+                        "id": "s1q9a2",
                         "title": "Kilometers",
                         "prompt": "Show distance in km"
                     }
-                ]
+                ],
+                "type": "radiogroup"
             }
 
         ]

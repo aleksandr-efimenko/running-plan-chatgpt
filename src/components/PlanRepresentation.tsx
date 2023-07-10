@@ -25,8 +25,6 @@ export function PlanRepresentation({ plan }: { plan: RunningPlanData[] }) {
         multiMonthMaxColumns={1}
         weekends={true}
         events={myEventsList}
-        eventDisplay="block"
-        eventTimeFormat={{}}
         headerToolbar={{
           left: "prev,next today",
           center: "title",
