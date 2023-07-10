@@ -67,7 +67,7 @@ export default function MainQuiz() {
     console.log(generatedData);
     if (!generatedData || !generatedData.choices) return;
     const generatedPlanJSON = convertCsvToObject(
-      generatedData.choices[0]?.message?.content
+      generatedData.choices[0]?.message?.content || ""
     );
     setGeneratedPlan(generatedPlanJSON);
   }, []);

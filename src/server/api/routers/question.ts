@@ -3,7 +3,7 @@ import { createTRPCRouter, publicProcedure } from "~/server/api/trpc";
 
 export const questionRouter = createTRPCRouter({
   createQuestion: publicProcedure
-    .input(z.object({ title: z.string(), quizId: z.number() }))
+    .input(z.object({ title: z.string(), quizId: z.string() }))
     .mutation(async ({ input, ctx }) => {
       const newQuestion = await ctx.prisma.question.create({
         data: {
@@ -12,7 +12,7 @@ export const questionRouter = createTRPCRouter({
         },
       });
 
-      return newQuiz;
+      return newQuestion;
     }),
 
   getAll: publicProcedure.query(({ ctx }) => {
