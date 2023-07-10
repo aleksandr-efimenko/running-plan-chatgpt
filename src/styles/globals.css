@@ -5,3 +5,7 @@
 .fc-daygrid-event {
   white-space: inherit;
 }
+
+.fc-list-event-time {
+  display: none;
+}

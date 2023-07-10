@@ -10,6 +10,8 @@ import { AnimatedSpinner } from "./AnimatedSpinner";
 import { type RunningPlanData, PlanRepresentation } from "./PlanRepresentation";
 
 export const surveyJson = {
+  title: "Create your personal marathon preparation plan",
+
   elements: mainQuizJson.Quiz.questions.map((question) => {
     return {
       name: question.id,
@@ -81,14 +83,28 @@ export default function MainQuiz() {
       {quizVisible && <Survey model={survey} />}
       {!quizVisible && !generatePlanMutation.isLoading && (
         <>
-          <div className="container my-16 w-full">
+          <div className="container mb-32 mt-16 w-full">
             <h2 className="text-center text-2xl">Generated Plan</h2>
             <PlanRepresentation plan={generatedPlan} />
           </div>
         </>
       )}
 
-      {generatePlanMutation.isLoading && <AnimatedSpinner />}
+      {generatePlanMutation.isLoading && (
+        <>
+          <div className="container my-16 flex w-full flex-col gap-10">
+            <div className="">
+              <h2 className="animate-pulse text-center text-2xl">
+                Generating your preparation plan...
+              </h2>
+              <h2 className="animate-pulse text-center text-lg">
+                It might take a while, please be patient.
+              </h2>
+            </div>
+            <AnimatedSpinner />
+          </div>
+        </>
+      )}
     </>
   );
 }

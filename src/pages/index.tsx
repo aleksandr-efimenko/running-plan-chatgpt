@@ -14,7 +14,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="my-6 flex flex-col items-center justify-center gap-6">
-        <h1 className="text-4xl font-bold">Marathon preparation plan</h1>
         <MainQuiz />
       </main>
     </>
