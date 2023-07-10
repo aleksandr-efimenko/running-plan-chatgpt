@@ -28,22 +28,22 @@
             },
             {
                 "id": "s1q3",
-                "title": "How much time do you have before the marathon?",
+                "title": "Choose the duration of your marathon preparation plan.",
                 "answers":[
                     {
                         "id": "s1q3a1",
-                        "title": "Less than 3 months.",
-                        "prompt": "The plan duration must be less than 3 months"
+                        "title": "8 weeks.",
+                        "prompt": "The plan duration must be 8 weeks"
                     },
                     {
                         "id": "s1q3a2",
-                        "title": "3-6 months.",
-                        "prompt": "The plan duration must be 3-6 months"
+                        "title": "12 weeks.",
+                        "prompt": "The plan duration must be 12 weeks"
                     },
                     {
                         "id": "s1q3a3",
-                        "title": "More than 6 months.",
-                        "prompt": "The plan duration must be more than 6 months"
+                        "title": "16 weeks.",
+                        "prompt": "The plan duration must be 16 weeks"
                     }
                 ],
                 "type": "radiogroup"

@@ -33,7 +33,7 @@ export function generateResultsForPromptChatGPT(
   prompt += `-The first training is on ${tomorrowDate || "tomorrow"};\n`;
   prompt += `-Plan can contain but not limited to: 
       (Easy Run, Interval Training, Long Run, Tempo Run) 
-      and must contain description of the training with minimum of 5 words;\n`;
+      and must contain description of the training with minimum of 3 words;\n`;
   prompt += "-Do not mention rest days;\n";
   prompt += "-The training days must be spread evenly;\n";
   prompt += "In the .csv format: \n";
