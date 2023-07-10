@@ -7,14 +7,16 @@ import { generateResultsForPromptChatGPT } from "~/utils/generateChatGPTPrompt";
 import { api } from "~/utils/api";
 import { convertCsvToObject } from "~/utils/convertCsvToJson";
 import { AnimatedSpinner } from "./AnimatedSpinner";
-import { RunningPlanData, PlanRepresentation } from "./TablePlanRepresentation";
+import { RunningPlanData, PlanRepresentation } from "./PlanRepresentation";
 
-const surveyJson = {
+export const surveyJson = {
   elements: mainQuizJson.Quiz.questions.map((question) => {
     return {
       name: question.id,
       title: question.title,
-      type: "radiogroup",
+      type: question.type,
+      visibleIf: question.visibleIf,
+      isRequired: true,
       choices: question.answers.map((answer) => {
         return {
           value: answer.id,
@@ -35,7 +37,7 @@ const generateChatGPTQuery = (prompt: string): ChatGPTQuery => {
   return {
     model: "gpt-4",
     prompt,
-    max_tokens: 100,
+    max_tokens: 2000,
     temperature: 0.7,
   };
 };
@@ -76,7 +78,7 @@ export default function MainQuiz() {
       {quizVisible && <Survey model={survey} />}
       {!quizVisible && !generatePlanMutation.isLoading && (
         <>
-          <div className="mb-16">
+          <div className="container my-16 w-full">
             <h2 className="text-center text-2xl">Generated Plan</h2>
             <PlanRepresentation plan={generatedPlan} />
           </div>
