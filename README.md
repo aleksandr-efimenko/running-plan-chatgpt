@@ -1,28 +1,41 @@
-# Create T3 App
+# ChatGPT marathon preparation plan generator
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+Live Site: [https://running-plan-chatgpt.up.railway.app/](https://running-plan-chatgpt.up.railway.app/)
 
-## What's next? How do I make an app with this?
+**It is an experimental project that I created to learn how to use OpenAI API and to try out SurveyJS.**
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+## Table of contents
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+- [Overview](#overview)
+- [The challenge](#the-challenge)
+- [Built with](#built-with)
+- [Author](#author)
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+## Overview
 
-## Learn More
+This is a simple app that generates a marathon preparation plan based on the user's answers to the questions of the survey. The app uses [SurveyJS](https://surveyjs.io/) to create a survey and [OpenAI API](https://platform.openai.com/docs/api-reference/introduction) to generate a plan based on the survey results.
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+## The challenge
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+Users should be able to:
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+- Answer questions about their running experience, goals, and preferences
+- Get a marathon preparation plan based on their answers shown in calendar format
 
-## How do I deploy this?
+## Built with
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+- [TypeScript](https://www.typescriptlang.org/) - For type checking
+- [Next.js](https://nextjs.org/) - React framework
+- [Tailwind CSS](https://tailwindcss.com/) - For styles
+- [SurveyJS](https://surveyjs.io/) - For creating a survey
+- [OpenAI API](https://platform.openai.com/docs/api-reference/introduction) - For generating a plan based on the survey results
+- [Full calendar](https://fullcalendar.io/) - For displaying the plan
+
+### What I learned
+
+Eventually, the application generates plans that, unfortunately, are not always good. Probably, for that task it would be better to use fine-tuning on a specific dataset or don’t use ML at all and create an algorithm with custom logic. Anyway, it was a good experience for me.
+
+## Author
+
+- Website - [Alex Efimenko](https://alexefimenko.com/)
+- LinkedIn - [@aleksandr-efimenko](https://www.linkedin.com/in/aleksandr-efimenko/)
