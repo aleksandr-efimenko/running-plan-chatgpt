@@ -7,7 +7,7 @@ import { generateResultsForPromptChatGPT } from "~/utils/generateChatGPTPrompt";
 import { api } from "~/utils/api";
 import { convertCsvToObject } from "~/utils/convertCsvToJson";
 import { AnimatedSpinner } from "./AnimatedSpinner";
-import { RunningPlanData, PlanRepresentation } from "./PlanRepresentation";
+import { type RunningPlanData, PlanRepresentation } from "./PlanRepresentation";
 
 export const surveyJson = {
   elements: mainQuizJson.Quiz.questions.map((question) => {
@@ -49,28 +49,31 @@ export default function MainQuiz() {
   const [quizVisible, setQuizVisible] = useState<boolean>(true);
   const survey = new Model(surveyJson);
   const generatePlanMutation = api.openai.generateCompletion.useMutation();
-  const surveyComplete = useCallback(async (sender: any) => {
-    const requestForChatGPT = generateResultsForPromptChatGPT(sender.data);
-    console.log(requestForChatGPT);
-    setQuizVisible(false);
-    //create a query for the chat gpt with model, prompt, max_tokens, temperature
-    const query = generateChatGPTQuery(requestForChatGPT);
+  const surveyComplete = useCallback(
+    //eslint-disable-next-line
+    async (sender: any) => {
+      //eslint-disable-next-line
+      const requestForChatGPT = generateResultsForPromptChatGPT(sender.data);
+      setQuizVisible(false);
+      //create a query for the chat gpt with model, prompt, max_tokens, temperature
+      const query = generateChatGPTQuery(requestForChatGPT);
 
-    //call the api with the query
-    const generatedData = await generatePlanMutation.mutateAsync({
-      model: query.model,
-      prompt: requestForChatGPT,
-      max_tokens: query.max_tokens,
-      temperature: query.temperature,
-    });
+      //call the api with the query
+      const generatedData = await generatePlanMutation.mutateAsync({
+        model: query.model,
+        prompt: requestForChatGPT,
+        max_tokens: query.max_tokens,
+        temperature: query.temperature,
+      });
 
-    console.log(generatedData);
-    if (!generatedData || !generatedData.choices) return;
-    const generatedPlanJSON = convertCsvToObject(
-      generatedData.choices[0]?.message?.content || ""
-    );
-    setGeneratedPlan(generatedPlanJSON);
-  }, []);
+      if (!generatedData || !generatedData.choices) return;
+      const generatedPlanJSON = convertCsvToObject(
+        generatedData.choices[0]?.message?.content || ""
+      );
+      setGeneratedPlan(generatedPlanJSON);
+    },
+    [generatePlanMutation]
+  );
 
   survey.onComplete.add(surveyComplete);
   return (

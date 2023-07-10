@@ -1,9 +1,5 @@
-import { signIn, signOut, useSession } from "next-auth/react";
 import dynamic from "next/dynamic";
 import Head from "next/head";
-import Link from "next/link";
-
-import { api } from "~/utils/api";
 
 const MainQuiz = dynamic(() => import("~/components/MainQuiz"), {
   ssr: false,

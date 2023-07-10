@@ -4,7 +4,7 @@ import { api } from "~/utils/api";
 export function CreateQuiz() {
   const [quizTitle, setQuizTitle] = useState("");
   const createQuizMutation = api.quiz.createQuiz.useMutation();
-  const handleCreateQuiz = async () => {
+  async () => {
     const quiz = await createQuizMutation.mutateAsync({
       title: quizTitle,
     });
