@@ -18,17 +18,17 @@ export function PlanRepresentation({ plan }: { plan: RunningPlanData[] }) {
     };
   });
   return (
-    <div className="container max-h-screen w-full">
+    <div className="container mx-auto max-w-5xl">
       <FullCalendar
         plugins={[dayGridPlugin, multiMonthPlugin, listPlugin]}
-        initialView="dayGridMonth"
+        initialView="multiMonthYear"
         multiMonthMaxColumns={1}
         weekends={true}
         events={myEventsList}
         headerToolbar={{
-          left: "prev,next today",
+          left: "prev,next",
           center: "title",
-          right: "dayGridMonth,multiMonthYear,listYear",
+          right: "multiMonthYear,listYear",
         }}
       />
     </div>

@@ -8,6 +8,8 @@ import { api } from "~/utils/api";
 import { convertCsvToObject } from "~/utils/convertCsvToJson";
 import { AnimatedSpinner } from "./AnimatedSpinner";
 import { type RunningPlanData, PlanRepresentation } from "./PlanRepresentation";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 export const surveyJson = {
   title: "Create your personal marathon preparation plan",
@@ -45,6 +47,7 @@ const generateChatGPTQuery = (prompt: string): ChatGPTQuery => {
 };
 
 export default function MainQuiz() {
+  const router = useRouter();
   const [generatedPlan, setGeneratedPlan] = useState<RunningPlanData[]>(
     [] as RunningPlanData[]
   );
@@ -87,6 +90,14 @@ export default function MainQuiz() {
             <h2 className="text-center text-2xl">Generated Plan</h2>
             <PlanRepresentation plan={generatedPlan} />
           </div>
+          <button
+            onClick={() => {
+              void router.reload();
+            }}
+            className="rounded-full bg-[#1ab394] px-4 py-2 font-bold text-white hover:bg-emerald-400"
+          >
+            Generate another plan
+          </button>
         </>
       )}
 
